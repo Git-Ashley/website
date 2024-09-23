@@ -1,0 +1,91 @@
+/*NOTE: Multiple selectors separated by comma's isn't possible when wrapped in a :global() modifier due to a bug, so there is lots of duplication*/
+
+:global .nc-nav-pills {
+  margin-top:11px;
+  margin-left: 40px;
+}
+:global .nc-nav-login-txt {
+  color: white;
+}
+:global .nc-nav-login-btn {
+  margin-left: 10px;
+}
+:global(.nc-nav-login-btn:hover) {
+  text-decoration: none;
+}
+:global(.nc-nav-login-btn:focus) {
+  text-decoration: none;
+}
+
+:global .nc-nav-bar {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  /*height: 64px;*/
+  width: 100%;
+  /*max-width: 100%;*/
+  /*color: #FFFFFF;*/
+  /*padding: 0;*/
+  border: none;
+  z-index: 1030;
+}
+
+
+
+
+/*painstakingly extracted from bootstrap*/
+:global(.nav-pills > a.active > li > div) {
+    background-color: #339933;
+}
+:global(.nav-pills > a.active > li > div:focus) {
+    background-color: #339933;
+}
+:global(.nav-pills > a.active > li > div:hover) {
+    background-color: #55bb55;
+}
+:global(.nav-pills > a.active > li > div:focus) {
+    background-color: #55bb55;
+}
+:global(.nav-pills > a > li > div:focus) {
+  background-color: #777777;
+}
+:global(.nav-pills > a > li > div:hover) {
+  background-color: #777777;
+}
+:global .nav-pills > a > li > div {
+  color:white;
+  background-color: #555555;
+}
+:global .nav-pills > a > li{
+  margin: 0 5px 0 5px;
+}
+:global .nav-pills > a > li {
+  float: left;
+}
+:global .nav-pills > a > li > div {
+  border-radius: 4px;
+}
+:global .nav-pills > a > li + li {
+  margin-left: 2px;
+}
+:global .nav > a > li > div {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+
+:global(.nav-login-btns > a > li > div:focus) {
+  background-color: #494949;
+  cursor: pointer;
+}
+:global(.nav-login-btns > a > li > div:hover) {
+  background-color: #494949;
+  cursor: pointer;
+}
+:global .nav-login-btns > a > li > div {
+  color:white;
+  background-color: transparent;
+}
