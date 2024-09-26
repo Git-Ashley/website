@@ -18,9 +18,8 @@ export async function getJson({
       onError(response.status)
     }
 
-    console.log('YO LOL!:', response)
     const json = await response.json();
-    console.log(json);
+
     onSuccess(json)
   } catch (error) {
     console.error(error.message);

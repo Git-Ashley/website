@@ -23,11 +23,6 @@ Ajax.post({
 
 
 
-
-
-
-// USE FUCKING FETCH. IVE HAD ENOUGH OF THIS.
-
 import {apiPrefix} from '@global/SiteConfig';
 
 export default class Ajax {
