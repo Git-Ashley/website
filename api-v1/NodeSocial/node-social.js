@@ -11,7 +11,7 @@ module.exports = function(app, server){
 
   const lobby = new Lobby();
 
-  app.post(PATH_PREFIX + '/socialapp/joingame/:gameId', (req, res) => {
+  app.post(ROUTE_PREFIX + '/socialapp/joingame/:gameId', (req, res) => {
     const gameId = req.params.gameId;
     if(!gameId)
       return res.json({success:false, error:{message:'Game not found!'}});
@@ -33,7 +33,7 @@ module.exports = function(app, server){
     return res.json(result);
   });
 
-  app.post(PATH_PREFIX + '/socialapp/lobby/join', (req, res) => {
+  app.post(ROUTE_PREFIX + '/socialapp/lobby/join', (req, res) => {
     const sid = req.cookies[SID];
     const user = req.user;
     const ip = req.headers[IP_HEADER];
