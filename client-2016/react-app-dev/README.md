@@ -1,4 +1,1 @@
-client
-
-The build system boilerplate was initially created using the create-react-app (https://www.npmjs.com/package/create-react-app) command line utility.
-The 'eject' feature has since been used for customisation.
+Old client from 2016 and modified in 2024 to work with docker, and fix compatibility issues. If you are an employer looking at this... please understand I was a junior, and all the frameworks and practices are many years past their sell by date! 😅
