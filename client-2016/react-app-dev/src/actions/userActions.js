@@ -1,11 +1,27 @@
 import * as Types from '@actions/types';
 import Ajax from '@services/Ajax';
+import { getJson } from '@services/APIFetch';
 
 function initiateUserSuccess(user){
   return {type: Types.INITIATE_USER_SUCCESS, user};
 }
 
-export function initiateUser(user){
+export function initiateUser(){
+  return dispatch => {
+    getJson({
+      url: '/account/user',
+      onSuccess: res => {
+        if(res.user)
+          return dispatch(initiateUserSuccess(res.user));
+      },
+      onError: err => {
+        throw new Error(`Response status: ${err}`);
+      }
+    });
+  };
+}
+
+export function initiateUserOld(user){
   return dispatch => {
     Ajax.get({
       url: '/account/user',

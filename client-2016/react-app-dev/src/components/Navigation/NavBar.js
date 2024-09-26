@@ -60,7 +60,12 @@ const NavBar = ({user, actions, routes}) => {
       jsx = <LoginRegisterNav/>;
   } else {
     //TODO Better loading display
-    jsx = <div className="pull-right" style={{color: 'white', marginTop: 20 + 'px'}}>Initializing...</div>
+    jsx = <div
+      className="pull-right"
+      style={{color: 'white', marginTop: 20 + 'px'}}
+    >
+      Initializing...
+    </div>
   }
 
   return (

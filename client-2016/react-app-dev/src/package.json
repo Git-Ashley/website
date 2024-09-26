@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "dom-tools": "git+https://github.com/Nodeocrat/dom-tools.git",
-    "math-tools": "git+https://github.com/Nodeocrat/math-tools.git",
-    "node-social": "git+https://github.com/Nodeocrat/node-social.git"
+    "dom-tools": "git+https://github.com/Git-Ashley/dom-tools.git",
+    "math-tools": "git+https://github.com/Git-Ashley/math-tools.git",
+    "node-social": "git+https://github.com/Git-Ashley/node-social.git"
   },
   "directories": {
     "lib": "lib"

@@ -189,7 +189,7 @@ function addMiddleware(devServer) {
 
     // Pass the scope regex both to Express and to the middleware for proxying
     // of both HTTP and WebSockets to work without false positives.
-    var hpm = httpProxyMiddleware(pathname => mayProxy.test(pathname), {
+    var hpm = httpProxyMiddleware.createProxyMiddleware({
       target: proxy,
       logLevel: 'silent',
       onProxyReq: function(proxyReq) {
@@ -203,15 +203,9 @@ function addMiddleware(devServer) {
       onError: onProxyError(proxy),
       secure: false,
       changeOrigin: true,
-      ws: true,
       xfwd: true
     });
-    devServer.use(mayProxy, hpm);
-
-    // Listen for the websocket 'upgrade' event and upgrade the connection.
-    // If this is not done, httpProxyMiddleware will not try to upgrade until
-    // an initial plain HTTP request is made.
-    devServer.listeningApp.on('upgrade', hpm.upgrade);
+    devServer.use(hpm);
   }
 
   // Finally, by now we have certainly resolved the URL.

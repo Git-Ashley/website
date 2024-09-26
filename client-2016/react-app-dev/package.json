@@ -38,7 +38,7 @@
     "file-loader": "0.10.0",
     "fs-extra": "0.30.0",
     "html-webpack-plugin": "2.24.0",
-    "http-proxy-middleware": "0.17.3",
+    "http-proxy-middleware": "^3.0.0",
     "json-loader": "0.5.4",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
@@ -62,5 +62,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "https://localhost"
+  "proxy": "http://localhost:8080"
 }

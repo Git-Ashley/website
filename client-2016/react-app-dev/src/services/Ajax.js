@@ -21,6 +21,13 @@ Ajax.post({
 });
 */
 
+
+
+
+
+
+// USE FUCKING FETCH. IVE HAD ENOUGH OF THIS.
+
 import {apiPrefix} from '@global/SiteConfig';
 
 export default class Ajax {
@@ -50,7 +57,16 @@ export default class Ajax {
 
 
     const xhr = new XMLHttpRequest();
-    xhr.open(options.method.toUpperCase(), options.url);
+
+    const methodStr = options.method.toUpperCase()
+    xhr.open(methodStr, options.url);
+    /*xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
+    xhr.setRequestHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS")
+    xhr.setRequestHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type, Authorization")
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
+    xhr.setRequestHeader( 'mode', 'no-cors')
+    //xhr.setRequestHeader('Request Method', methodStr)
+    xhr.setRequestHeader("origin", "http://localhost:8080")*/
 
     const rawSendData = options.data;
     if(rawSendData){
