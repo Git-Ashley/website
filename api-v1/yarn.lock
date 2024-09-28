@@ -1639,7 +1639,7 @@ serve-static@~1.9.2:
 
 "server-room@git+https://github.com/Nodeocrat/server-room.git":
   version "0.0.1"
-  resolved "git+https://github.com/Nodeocrat/server-room.git#a89b72790b7c17d957b9013e17d3a4ec36f3bc9f"
+  resolved "git+https://github.com/Nodeocrat/server-room.git#3662f16f94500210468876add88237149a38f46e"
   dependencies:
     ws "^7.2.1"
 

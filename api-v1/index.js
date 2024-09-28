@@ -6,7 +6,7 @@ const MongoStore = require('connect-mongo')(session);
 const API_ROOT = require('./config').API_ROOT;
 const WebSocket = require('ws');
 
-const port = 8080;
+const port = 4435;
 const mongoUrl = 'mongodb://localhost:27017/test';
 
 mongoose.connect(mongoUrl, {useMongoClient: true});

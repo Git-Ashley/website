@@ -11,7 +11,7 @@
 
 "client-room@git+https://github.com/Nodeocrat/client-room.git":
   version "0.0.1"
-  resolved "git+https://github.com/Nodeocrat/client-room.git#a089c7e486ae02b9b830c14fb19bd10111ab3809"
+  resolved "git+https://github.com/Nodeocrat/client-room.git#e7dd90245a69e57ed5752dd643cd906c2376775e"
 
 "dom-tools@git+https://github.com/Git-Ashley/dom-tools.git":
   version "1.0.0"
@@ -69,7 +69,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
 
 "node-social@git+https://github.com/Git-Ashley/node-social.git":
   version "0.0.1"
-  resolved "git+https://github.com/Git-Ashley/node-social.git#8edd385bbaedccd63e4f60a9cdd315749568c156"
+  resolved "git+https://github.com/Git-Ashley/node-social.git#f213ba141f4106e52426ea52c3ec639ee7af1372"
   dependencies:
     client-room "git+https://github.com/Nodeocrat/client-room.git"
     dom-tools "git+https://github.com/Nodeocrat/dom-tools.git"

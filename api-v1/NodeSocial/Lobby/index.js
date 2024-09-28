@@ -7,7 +7,7 @@ const NodeShooter = require('../NodeShooter');
 const MAX_GAMES = 3;
 const DEFAULT_TIME = 300000;
 
-module.exports = class Lobby extends Room {
+module.exports = class Lobby extends Room.WithReadyCheck {
   constructor(){
     super({reconnectTimeout: 30000});
 
@@ -60,14 +60,13 @@ module.exports = class Lobby extends Room {
     }
   }
 
-  onClientReconnect(client){
-    super.onClientReconnect(client);
+  onClientReconnectReady(client){
     const player = this._lobbyPlayers.get(client.id);
     if(player){
       player.status = LobbyPlayer.States.ACTIVE;
       this.broadcast(EventTypes.UPDATE_PLAYER, player.profile);
     }
-    //TODO send back all messages data from the time of first initClient. (up to 100)
+    //TODO send back all messages data from the time of first onClientReady. (up to 100)
     //Stuff will need sortign first with messages...
     this.sendAllData(client, 'RESUME');
   }
@@ -100,9 +99,7 @@ module.exports = class Lobby extends Room {
     return nodeShooterInstance;
   }
 
-  initClient(client){
-    super.initClient(client);
-
+  onClientReady(client){
     const player = this._lobbyPlayers.get(client.id);
     this.addListener(client, EventTypes.SEND_MESSAGE, msg => {
       const randomStr = require(UTILS + '/random-string.js')();

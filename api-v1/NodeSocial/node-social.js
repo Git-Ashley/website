@@ -3,6 +3,8 @@ const Room = require('server-room');
 
 const ROUTE_PREFIX = '';
 const RESPONSE_URL = '/api/';
+//const ROUTE_PREFIX = '/api';
+//const RESPONSE_URL = '/';
 
 const SID = 'connect.sid';
 const IP_HEADER = 'x-real-ip';
