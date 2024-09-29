@@ -3,7 +3,7 @@ const randomStr = require(UTILS + '/random-string.js');
 const Room = require('server-room');
 
 // Base class for all games
-module.exports = class Game extends Room {
+module.exports = class Game extends Room.WithReadyCheck {
 
   constructor(ops){
     super(ops);
@@ -24,7 +24,7 @@ module.exports = class Game extends Room {
       this._timer = null;
 
     //It is only expected for the lobby to need to listen to these events for now
-    //hence the decision for only a single allowed listener to prevent accidental memory leak
+    //so only allow a single listener to prevent accidental memory leak
     this._onPlayerLeaveListener = () => {};
     this._onPlayerJoinListener = () => {};
     this._onEndListener = () => {};

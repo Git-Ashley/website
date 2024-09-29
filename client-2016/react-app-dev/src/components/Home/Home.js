@@ -66,8 +66,8 @@ export default () => (
       <Summary/>
     </section>
     <ProjectSummarySection/>
-    <section className="col-sm-12 visible-lg visible-md hidden-sm hidden-xs" style={{marginTop: '40px'}}>
+    {/*<section className="col-sm-12 visible-lg visible-md hidden-sm hidden-xs" style={{marginTop: '40px'}}>
       <Logos/>
-    </section>
+    </section>*/}
   </section>
 );

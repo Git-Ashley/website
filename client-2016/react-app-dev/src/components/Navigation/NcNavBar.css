@@ -65,7 +65,7 @@
   float: left;
 }
 :global .nav-pills > a > li > div {
-  border-radius: 4px;
+  border-radius: 0px;
 }
 :global .nav-pills > a > li + li {
   margin-left: 2px;

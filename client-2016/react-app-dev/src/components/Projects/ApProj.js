@@ -11,7 +11,7 @@ export default () => (
       <br/>
       <br/>Download: <a href="/GraphAlgorithms.jar">GraphAlgorithms.jar</a>
       <br/>It has been tested with Java 1.7 and 1.8. 1.6 and lower may or may not work.
-      <br/><a href="https://github.com/Nodeocrat/Graph-Theory-Algorithms/blob/master/src/Algorithms/AuslanderParter.java"><u>View code on Github</u></a> Note: This project was originally part of a maths degree and even though it has been re-written since, I was still a novice developer at the time of the re-write, so some design choices will be questionable to professional developers.
+      <br/><a href="https://github.com/Git-Ashley/Graph-Theory-Algorithms/blob/master/src/Algorithms/AuslanderParter.java"><u>View code on Github</u></a> Note: This project was originally part of a maths degree and even though it has been re-written since, I was still a novice developer at the time of the re-write, so some design choices will be questionable to professional developers.
       <br/>
       <br/>The relevant section of my dissertation to understand how the Auslander-Parter algorithm works:
       <br/><object height="1000" width="800" data="/Auslander-Parter.pdf"></object>

@@ -7,7 +7,8 @@ const API_ROOT = require('./config').API_ROOT;
 const WebSocket = require('ws');
 
 const port = 4435;
-const mongoUrl = 'mongodb://localhost:27017/test';
+//const mongoUrl = 'mongodb://localhost:27017/docker-node-mongo';
+const mongoUrl = 'mongodb://db:27017/docker-node-mongo';
 
 mongoose.connect(mongoUrl, {useMongoClient: true});
 

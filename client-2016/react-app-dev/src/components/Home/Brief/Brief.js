@@ -23,9 +23,9 @@ export default (props) => {
         <span>&nbsp; 2:1 Mathematics University of Brighton</span>
         <br/>
         <span className={icons['icon-mail']}/>
-        <span>&nbsp; ashley.phillips@nodeocrat.com</span>
+        <span>&nbsp; ashp1621@gmail.com</span>
         <br/>
-        <a href="/AshleyPhillips-CV-20180220.pdf" target="_blank">View CV</a>
+        {/*<a href="/AshleyPhillips-CV-20180220.pdf" target="_blank">View CV</a>*/}
       </div>
       <div className={text.regular}>
       </div>

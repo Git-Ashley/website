@@ -10,7 +10,7 @@ module.exports = class NodeShooter extends Game {
     this._nodeShooterInstance = NodeShooterOld(this);
   }
 
-  initClient(client){
+  onClientReady(client){
     super.initClient(client);
     this._nodeShooterInstance.join(client);
   }

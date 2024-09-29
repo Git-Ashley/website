@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+react-app-dev
+package.json
+README.md
+yarn.lock

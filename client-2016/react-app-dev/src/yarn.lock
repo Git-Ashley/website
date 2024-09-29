@@ -69,7 +69,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
 
 "node-social@git+https://github.com/Git-Ashley/node-social.git":
   version "0.0.1"
-  resolved "git+https://github.com/Git-Ashley/node-social.git#f213ba141f4106e52426ea52c3ec639ee7af1372"
+  resolved "git+https://github.com/Git-Ashley/node-social.git#066ffc1347f02c3ae7b50865ffacf9d580bd0de3"
   dependencies:
     client-room "git+https://github.com/Nodeocrat/client-room.git"
     dom-tools "git+https://github.com/Nodeocrat/dom-tools.git"

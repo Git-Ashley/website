@@ -44,7 +44,7 @@ const UserMenu = withRouter(({history, onLogout, profile}) => {
 const NavLogo = () => (
   <Link to="/">
     <img style={{margin: 10 + 'px'}} className="pull-left" alt="logo" src={logo}/>
-    <h2 className="text-muted pull-left" style={{marginLeft: 5 + 'px', marginTop: 16 + 'px', marginBottom: 12 + 'px', color: '#66cc33'}}><b>Nodeocrat</b></h2>
+    {/*<h2 className="text-muted pull-left" style={{marginLeft: 5 + 'px', marginTop: 16 + 'px', marginBottom: 12 + 'px', color: '#66cc33'}}><b>Nodeocrat</b></h2>*/}
   </Link>
 );
 

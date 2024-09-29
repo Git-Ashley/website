@@ -17,18 +17,18 @@ export default class RoomProj extends React.Component {
         <h2 style={{textAlign: 'center'}}><b>Samples</b></h2>
         <div>There are 6 samples:</div>
         <ul>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-1" target="_blank">Sample 1: Basics</a></li>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-2" target="_blank">Sample 2: Disconnecting & reconnecting</a></li>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-3" target="_blank">Sample 3: Permissions</a></li>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-4" target="_blank">Sample 4: Initialization hook</a></li>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-5" target="_blank">Sample 5: Multiple rooms of the same type</a></li>
-          <li><a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-6" target="_blank">Sample 6: Everything together</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-1" target="_blank">Sample 1: Basics</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-2" target="_blank">Sample 2: Disconnecting & reconnecting</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-3" target="_blank">Sample 3: Permissions</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-4" target="_blank">Sample 4: Initialization hook</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-5" target="_blank">Sample 5: Multiple rooms of the same type</a></li>
+          <li><a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-6" target="_blank">Sample 6: Everything together</a></li>
         </ul>
 
         <br/>
         <h4><b>Sample 1: Basics</b></h4>
         <p>
-        <a href="https://github.com/Nodeocrat/room-samples/tree/master/sample-1">Sample 1</a>{` is a simple chat room example. If you're testing it on your own, use two separate browsers or a browser with incognito mode to log into multiple accounts. The server side room module doesn't allow multiple clients with the same session ID.`}
+        <a href="https://github.com/Git-Ashley/room-samples/tree/master/sample-1">Sample 1</a>{` is a simple chat room example. If you're testing it on your own, use two separate browsers or a browser with incognito mode to log into multiple accounts. The server side room module doesn't allow multiple clients with the same session ID.`}
         </p>
         <p>
         {`On the client side the part to take notice of is in the login() function. The rest is mostly DOM manipulation.`}
@@ -52,7 +52,7 @@ export default class RoomProj extends React.Component {
           .catch(err => console.log(err));`}
           </pre>
           <p>
-          {`Above is an excerpt from the client sample. To create a client room you must always construct a new room and use `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#clientroomjoinurl-payload" target="_blank">ClientRoom.join</a>{` to request to join that room. If unsuccessful an exception will be thrown with err being a string, for the reason of the failure. Upon success, this is the time to initialize the client. Once you have finished initializing, call `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank">initialized()</a>{` as shown, which will notify the corresponding room on the server that you have finished initializing.`}
+          {`Above is an excerpt from the client sample. To create a client room you must always construct a new room and use `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroomjoinurl-payload" target="_blank">ClientRoom.join</a>{` to request to join that room. If unsuccessful an exception will be thrown with err being a string, for the reason of the failure. Upon success, this is the time to initialize the client. Once you have finished initializing, call `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank">initialized()</a>{` as shown, which will notify the corresponding room on the server that you have finished initializing.`}
           Now for the server side code,
           </p>
           <pre className="prettyprint">
@@ -61,7 +61,7 @@ export default class RoomProj extends React.Component {
           Room.initialize(server, {sidHeader: SID});`}
           </pre>
           Firstly it is important to note you must pass the http server to
-          <a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank"> Room.initialize()</a>, and your session ID string name in the cookie, with the  sidHeader prop in the optional 2nd argument (default to 'sid').
+          <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank"> Room.initialize()</a>, and your session ID string name in the cookie, with the  sidHeader prop in the optional 2nd argument (default to 'sid').
 
           <pre className="prettyprint">
           {`
@@ -71,7 +71,7 @@ export default class RoomProj extends React.Component {
           });`}
           </pre>
           <p>
-          {`This is the API endpoint which chatRoom.join('/chatroom') posts to in the client sample, and is where permission is requested to join the room. The `} <a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonjoinrequestclient-userinfo" target="_blank">permission hook</a>{` is demonstrated in sample 3, but if you do not implement it in your subclass, then permission will always be granted to join. Once permission to join has been granted, the client is added to the room in an uninitialized state and will not yet receive broadcasted messages. A useful hook `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonclientacceptedclient" target="_blank">onClientAccepted</a>{` is called at this time too, demonstrated in sample 4. If your Room server is at a different URL to your API, or you want to specify a path, you can add a 'url' property onto the result object here. It can be a relative path or an absolute URL.`}
+          {`This is the API endpoint which chatRoom.join('/chatroom') posts to in the client sample, and is where permission is requested to join the room. The `} <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonjoinrequestclient-userinfo" target="_blank">permission hook</a>{` is demonstrated in sample 3, but if you do not implement it in your subclass, then permission will always be granted to join. Once permission to join has been granted, the client is added to the room in an uninitialized state and will not yet receive broadcasted messages. A useful hook `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonclientacceptedclient" target="_blank">onClientAccepted</a>{` is called at this time too, demonstrated in sample 4. If your Room server is at a different URL to your API, or you want to specify a path, you can add a 'url' property onto the result object here. It can be a relative path or an absolute URL.`}
           </p>
           <pre className="prettyprint">
           {`
@@ -104,13 +104,13 @@ export default class RoomProj extends React.Component {
             }
           }`}</pre>
           <p>
-          {`This is our subclass which extends Room, and implements only two client hooks. initClient is called when a client has called `} <a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank">ClientRoom.initialized()</a>{`, from the first code sample on the client side, so you can safely assume here that the client is all initialized, and is a good place to set the listeners. The `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonclientleaveclient" target="_blank">onClientLeave</a>{` hook is called when a client leaves, which can happen in a number of ways. Both `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#clientroomleave" target="_blank">client</a>{` and `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonclientleaveclient" target="_blank">server</a>{` modules have a leave method, with the server-side module taking a client parameter. Also if you haven't implemented disconnect/reconnect functionality, a disconnect will automatically boot the player from the room.`}
+          {`This is our subclass which extends Room, and implements only two client hooks. initClient is called when a client has called `} <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank">ClientRoom.initialized()</a>{`, from the first code sample on the client side, so you can safely assume here that the client is all initialized, and is a good place to set the listeners. The `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonclientleaveclient" target="_blank">onClientLeave</a>{` hook is called when a client leaves, which can happen in a number of ways. Both `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroomleave" target="_blank">client</a>{` and `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonclientleaveclient" target="_blank">server</a>{` modules have a leave method, with the server-side module taking a client parameter. Also if you haven't implemented disconnect/reconnect functionality, a disconnect will automatically boot the player from the room.`}
         </p>
 
         <br/>
         <h4><b>Sample 2: Disconnecting & reconnecting</b></h4>
         <p>
-        {`The SocketHandler class (read about it in the `}<Link to='/projects/Room'>Summary</Link>{` section) can detect disconnects and reconnects, and will try to reconnect when the connection is lost. The server-side Room module allows you to access `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonclientdisconnectclient" target="_blank">onClientDisconnect</a>{` and `} <a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonclientreconnectclient" target="_blank">onClientReconnect</a>{` hooks, when this happens. To stop players being booted from the room upon disconnect, you must pass a reconnectTimeout property in the `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#new-roomoptions" target="_blank">constructor</a>{`, as follows:`}
+        {`The SocketHandler class (read about it in the `}<Link to='/projects/Room'>Summary</Link>{` section) can detect disconnects and reconnects, and will try to reconnect when the connection is lost. The server-side Room module allows you to access `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonclientdisconnectclient" target="_blank">onClientDisconnect</a>{` and `} <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonclientreconnectclient" target="_blank">onClientReconnect</a>{` hooks, when this happens. To stop players being booted from the room upon disconnect, you must pass a reconnectTimeout property in the `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#new-roomoptions" target="_blank">constructor</a>{`, as follows:`}
         </p>
         <pre className="prettyprint">
         {`
@@ -159,7 +159,7 @@ export default class RoomProj extends React.Component {
         <br/>
         <h4><b>Sample 3: Permissions</b></h4>
         <p>
-        {`This sample demonstrates how to grant or refuse permission. Here, we refuse permission to join if the username entered is longer than 8 characters, or if its empty. To do this, all we need to do is implement the `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/api-docs.md#hook-roomonjoinrequestclient-userinfo" target="_blank">onJoinRequest</a>{` hook on the server-side ChatRoom class, as shown below.`}
+        {`This sample demonstrates how to grant or refuse permission. Here, we refuse permission to join if the username entered is longer than 8 characters, or if its empty. To do this, all we need to do is implement the `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#hook-roomonjoinrequestclient-userinfo" target="_blank">onJoinRequest</a>{` hook on the server-side ChatRoom class, as shown below.`}
         </p>
         <pre className="prettyprint">
         {`
@@ -279,7 +279,7 @@ export default class RoomProj extends React.Component {
           });`}
         </pre>
         <p>
-        {`For the client, when you login now, you are presented with 4 rooms which you can join. The code for the client is mostly the same apart from it has been factored into its own class (in `}<a href="https://github.com/Nodeocrat/room-samples/blob/master/sample-5/client/chat-room.js" target="_blank">chat-room.js</a>{`), with the constructor taking an integer for the room number and there is a new renderJoinBtn function so each room can have its own join button. Normally web components should be used here, but the spec is too unstable at the moment, and using babel or React isn't worth it for such a small sample, so we just use a class which manipulates the DOM when it is constructed.`}
+        {`For the client, when you login now, you are presented with 4 rooms which you can join. The code for the client is mostly the same apart from it has been factored into its own class (in `}<a href="https://github.com/Git-Ashley/room-samples/blob/master/sample-5/client/chat-room.js" target="_blank">chat-room.js</a>{`), with the constructor taking an integer for the room number and there is a new renderJoinBtn function so each room can have its own join button. Normally web components should be used here, but the spec is too unstable at the moment, and using babel or React isn't worth it for such a small sample, so we just use a class which manipulates the DOM when it is constructed.`}
         </p>
         <pre className="prettyprint">
         {`

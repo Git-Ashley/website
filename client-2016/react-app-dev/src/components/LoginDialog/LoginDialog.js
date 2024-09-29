@@ -44,7 +44,7 @@ class LoginDialog extends React.Component {
     if(this.props.error){
       err = this.props.error;
     } else if(loginErr)
-      err = `That ${loginErr} account is not linked to a Nodeocrat account`;
+      err = `That ${loginErr} account is not linked to a registered account`;
 
 
     return (
@@ -60,7 +60,7 @@ class LoginDialog extends React.Component {
             }
             <div className={position.center}>
               <div style={{margin: 15 + 'px', display: 'inline-block'}}>
-                <TextBtn spanParent onClick={this.props.actions.guestLogin} color='white' backgroundColor='#999' text='Continue as guest'/>
+                <TextBtn spanParent onClick={this.props.actions.guestLogin} color='white' backgroundColor='rgb(51,51,51)' text='Continue as guest'/>
                 <a href="/api/auth/google">
                   <SocialButton spanParent site="google"
                     text="Sign in with Google"/>
