@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import RegisterDialog from '@components/RegisterDialog/RegisterDialog';
 import LoginDialog from '@components/LoginDialog/LoginDialog';
 import UrlHelper from '@services/UrlHelper';
+import ReactTooltip from 'react-tooltip';
 
 class LoginRegisterNav extends React.Component {
   constructor(props){
@@ -28,10 +29,13 @@ class LoginRegisterNav extends React.Component {
           </a>
           <a>
             <li>
-              <div onClick={()=>(this.setState({showRegisterDialog: true}))}>Register</div>
+              <div data-tip data-for='RegisterDisabledTooltip' onClick={()=>{}/*()=>(this.setState({showRegisterDialog: true}))*/}>Register</div>
             </li>
           </a>
         </ul>
+        <ReactTooltip place="bottom" id='RegisterDisabledTooltip' type='dark'>
+          <span>Temporarily disabled - please use guest login</span>
+        </ReactTooltip>
         {this.state.showLoginDialog ?
           <LoginDialog onClose={() => (this.setState({showLoginDialog: false}))}/>
           : null

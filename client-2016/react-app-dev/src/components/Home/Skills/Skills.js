@@ -3,39 +3,30 @@ import {skillPill} from './Skills.css';
 import text from '@styles/text.css';
 
 const keySkills = [
-  "Node.js",
-  "React.js",
-  "ES6",
+  "Node",
+  "ReactJS",
   "Redux",
   "AWS",
-  "CSS3",
-  "HTML5",
-  "Web Components",
-  "Webpack",
   "MongoDB",
   "Linux",
-  "Express.js",
-  "Npm",
-  "Git",
-  "Mocha (TDD)",
-  "Cucumber (BDD)",
+  "Express",
   "PostgreSQL",
-  "WebSockets"
+  "WebSockets",
+  "Cypress",
+  "react-query",
 ];
 
 const otherSkills = [
-  "Travis",
   "C++",
-  "AngularDart",
-  "Dart",
-  "Passport",
+  "AWS Lambda",
   "Nginx",
   "Website Hosting",
   "Java",
   "Qt",
-  "SubVersion",
-  "Redmin",
-  "JIRA"
+  "Python",
+  "Webpack",
+  "Networking",
+  "TDD"
 ];
 
 export default class Skills extends React.Component {

@@ -47,7 +47,7 @@ export default class PhotoWidget extends React.PureComponent {
           height="150" width="150" id="home-profile-img"/>
           <br/>
           {githubIcon ? (<a href="https://github.com/Git-Ashley?tab=repositories" target="_blank">{githubIcon}</a>) : null}
-          {linkedinIcon ? (<a href="https://uk.linkedin.com/in/ashley-phillips-5b5a8599" target="_blank">{linkedinIcon}</a>) : null}
+          {linkedinIcon ? (<a href="https://www.linkedin.com/in/ashley-p-5b5a8599/" target="_blank">{linkedinIcon}</a>) : null}
       </div>
     );
   }

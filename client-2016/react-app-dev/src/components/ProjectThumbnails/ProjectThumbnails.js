@@ -6,6 +6,7 @@ import socialAppThumbnail from '@media/social-app-thumbnail.png';
 import nbThumbnail from '@media/nb-thumbnail.png';
 import apThumbnail from '@media/ap-thumbnail.png';
 import roomThumbnail from '@media/room-thumbnail.png';
+import memappThumbnail from '@media/memapp-thumbnail.png';
 
 //styles
 import border from '@styles/border.css';
@@ -14,16 +15,22 @@ import position from '@styles/position.css';
 
 const projects = [
   {
-    name: "Room pattern",
-    summary: "Client & Backend package to aid with communication for a room of clients",
-    img: roomThumbnail,
-    route: "Room"
-  },
-  {
     name: "Social App",
     summary: "Lobby integrated with Node Shooter",
     img: socialAppThumbnail,
     route: "NodeSocial"
+  },
+  {
+    name: "Memapp",
+    summary: "Spaced repetition learning app",
+    img: memappThumbnail,
+    route: "Memapp",
+  },
+  {
+    name: "Room pattern",
+    summary: "Client & Backend package to aid with communication for a room of clients",
+    img: roomThumbnail,
+    route: "Room"
   },
   {
     name: "Node Shooter",

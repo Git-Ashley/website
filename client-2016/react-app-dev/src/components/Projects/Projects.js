@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import RoomProj from './RoomProj';
 import ApProj from './ApProj';
 import NbProj from './GameProj';
+import MemappProj from './Memapp';
 import NodeSocial from 'node-social';
 import ProjectThumbnails from '@components/ProjectThumbnails/ProjectThumbnails';
 import {AuthRoute} from '@lib/CustomRoutes';
@@ -28,6 +29,7 @@ const Projects = props => {
       <Route path={`${props.match.path}/Room`} component={RoomProj}/>
       <Route path={`${props.match.path}/ApProj`} component={ApProj}/>
       <Route path={`${props.match.path}/GameProj`} component={NbProj}/>
+      <Route path={`${props.match.path}/Memapp`} component={MemappProj}/>
       <AuthRoute style={{padding: '0 40px 40px 40px'}} user={props.user} path={`${props.match.path}/NodeSocial`} component={NodeSocial}/>
     </div>
   );

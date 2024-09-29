@@ -2,6 +2,7 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 import * as userActions from '@actions/userActions';
 import * as loginActions from '@actions/loginActions';
@@ -61,16 +62,22 @@ class LoginDialog extends React.Component {
             <div className={position.center}>
               <div style={{margin: 15 + 'px', display: 'inline-block'}}>
                 <TextBtn spanParent onClick={this.props.actions.guestLogin} color='white' backgroundColor='rgb(51,51,51)' text='Continue as guest'/>
-                <a href="/api/auth/google">
-                  <SocialButton spanParent site="google"
+                <a data-tip data-for='GoogleOAuthTooltip'>{/*href="/api/auth/google"*/}
+                  <SocialButton disabled spanParent site="google"
                     text="Sign in with Google"/>
                 </a>
-                <a href="/api/auth/facebook">
-                  <SocialButton spanParent site="facebook"
+                <a data-tip data-for='FBOAuthTooltip'>{/*href="/api/auth/facebook"*/}
+                  <SocialButton disabled spanParent site="facebook"
                     text="Sign in with Facebook"/>
                 </a>
               </div>
             </div>
+            <ReactTooltip place="bottom" id='FBOAuthTooltip' type='dark'>
+              <span>OAuth currently being updated</span>
+            </ReactTooltip>
+            <ReactTooltip place="bottom" id='GoogleOAuthTooltip' type='dark'>
+              <span>OAuth currently being updated</span>
+            </ReactTooltip>
             <div className="row">
               <div className="col-sm-offset-2 col-sm-8">
                 <TextField name="username" placeholder="Username"
