@@ -8,6 +8,7 @@
     "placeholder-build": "rm -rf ./react/build/html/* && rm -rf ./react/build/css/* && rm -rf ./react/build/js/* && babel ./react/src | uglifyjs - -c -m --screw-ie8 -o ./react/build/js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
