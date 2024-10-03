@@ -12,7 +12,7 @@ module.exports = function(){
     {
       clientID: Config.facebookClientId,
       clientSecret: Config.facebookClientSecret,
-      callbackURL: 'https://www.nodeocrat.com/api/auth/facebook/callback',
+      callbackURL: 'https://www.ashphillips.com/api/auth/facebook/callback',
       // Necessary for new version of Facebook graph API
       profileFields: ['id', 'emails', 'name']
     },

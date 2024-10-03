@@ -1,9 +1,11 @@
 FROM nginx:alpine
 
+RUN mkdir -p /etc/tls/
+
 RUN rm /etc/nginx/conf.d/default.conf
 
 COPY . /usr/share/nginx/html
 
-COPY dev.local.conf /etc/nginx/conf.d/default.conf
+COPY default.local.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80 443

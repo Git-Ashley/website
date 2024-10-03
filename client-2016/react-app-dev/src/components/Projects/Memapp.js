@@ -1,7 +1,6 @@
 import React from 'react';
 import text from '@styles/text.css';
 import memappImg from '@media/memapp-screenshot.png';
-import {Link} from 'react-router-dom';
 
 export default props => (
   <section className="container">

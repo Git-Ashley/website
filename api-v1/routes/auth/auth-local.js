@@ -58,14 +58,12 @@ module.exports = function() {
 
       const randomStr = require(UTILS + '/random-string.js')(6);
       const username = `Guest#${randomStr}`;
-      const email = `${username}@nodeocrat.com`;
       const password = 'password';
 
       req.body = {username, password};
 
       let newUser = new User();
       newUser['username'] = username;
-      newUser['email'] = email;
       newUser['password'] = password;
       User.create(newUser, function(err, user){
         if(err)
