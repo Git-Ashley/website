@@ -20,11 +20,4 @@ const SocialProfile = (props) => (
   </div>
 );
 
-SocialProfile.propTypes = {
-  site: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  photoUrl: React.PropTypes.string.isRequired,
-  onUnlink: React.PropTypes.func.isRequired
-}
-
 export default SocialProfile;

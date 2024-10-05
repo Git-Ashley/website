@@ -23,7 +23,3 @@ export default class GRecaptcha extends React.Component {
     );
   }
 };
-
-GRecaptcha.propTypes = {
-  onResponse: React.PropTypes.func.isRequired
-};

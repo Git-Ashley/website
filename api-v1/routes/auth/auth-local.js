@@ -66,8 +66,10 @@ module.exports = function() {
       newUser['username'] = username;
       newUser['password'] = password;
       User.create(newUser, function(err, user){
-        if(err)
-          return res.status(status.BAD_REQUEST).end();
+        if(err) {
+          console.error(err);
+          return res.status(400).end();
+        }
 
         passport.authenticate('local', function(err, user, info) {
           if (err) { return next(err); }

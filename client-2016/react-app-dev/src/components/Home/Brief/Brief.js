@@ -5,27 +5,44 @@ import PhotoWidget from './PhotoWidget';
 import text from '@styles/text.css';
 import icons from '@fonts/icons/icons.css';
 
+import { IoLanguage } from 'react-icons/io5';
+import { IoBriefcase } from 'react-icons/io5';
+//import { IoChatbubbleEllipses } from 'react-icons/io5';
+
 export default (props) => {
 
-  const style = {
+  const containerStyle = {
     paddingTop: 10 + 'px',
     paddingBottom: 30 + 'px'
   }
 
+  const statsStyles = {
+    marginTop: '12px',
+  }
+
   return (
-    <section style={style} className="">
+    <section style={containerStyle} className="">
       <PhotoWidget/>
-      <div className={`${text.title + " " + text.center}`}>
+      <div className={`${text.title} ${text.center}`}>
         Ashley Phillips
       </div>
-      <div className={`${text.regular + " " + text.center}`}>
+      <div className={`${text.subTitle} ${text.center}`}>
+        Full Stack Developer
+      </div>
+      <div className={`${text.regular} ${text.center}`} style={statsStyles}>
+        <IoBriefcase />
+        <span>&nbsp; 7+ years of professional experience</span>
+        <br/>
         <span className={icons['icon-graduation-cap']}/>
-        <span>&nbsp; 2:1 Mathematics University of Brighton</span>
+        <span>&nbsp; Bsc Mathematics</span>
+        <br/>
+        <IoLanguage />
+        <span>&nbsp; English (native), French (B2+)</span>
         <br/>
         <span className={icons['icon-mail']}/>
         <span>&nbsp; ashp1621@gmail.com</span>
         <br/>
-        {/*<a href="/AshleyPhillips-CV-20180220.pdf" target="_blank">View CV</a>*/}
+        {<a href="/CV.pdf" target="_blank">View CV</a>}
       </div>
       <div className={text.regular}>
       </div>

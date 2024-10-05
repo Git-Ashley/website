@@ -65,7 +65,7 @@ const HomePageProjectThumbnails = props => (
   <div {...props}>
   {
     projects.slice(0,2).map((project) => (
-      <div>
+      <div key={project.name}>
         <Link to={`projects/${project.route}`}>
           <figure style={{marginTop: 25 + 'px', marginBottom: 10 + 'px', display: 'inline-block'}} className={`${border.shadow} ${border.hoverShadow}`}>
             <img alt="" height="185" width="300" src={project.img}/>

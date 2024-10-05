@@ -1,4 +1,4 @@
-import {Route, withRouter} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import React from 'react';
 import {connect} from 'react-redux';
 import StatusText from '@lib/StatusText';

@@ -41,7 +41,4 @@ const StatusText = props => {
   );
 };
 
-StatusText.propTypes = {
-  type: React.PropTypes.oneOf(Object.keys(typeToDetails)).isRequired
-};
 export default StatusText;

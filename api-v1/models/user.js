@@ -23,9 +23,9 @@ const UserSchema = new mongoose.Schema({
       default: "default"
     }
   },
-  email: {
+  email: { // uniqueness doesn't matter
+    index: false,
 	  type: String,
-	  unique: true
   },
   oauth: {
     facebook: {

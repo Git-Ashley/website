@@ -16,9 +16,6 @@ const SocialButton = (props) => {
     </div>
   );
 };
-SocialButton.propTypes = {
-  text: React.PropTypes.string.isRequired
-};
 
 const SocialSymbol = (props) => (
   <button disabled={props.disabled} type="button" className={`btn social-login-btn ${props.spanParent ? 'span-parent' : null} ${socialFonts[props.site + '-btn-textless']}`} style={props.style} onClick={props.onClick}>
@@ -35,9 +32,6 @@ const TextBtn = props => {
       </button>
     </div>
   );
-};
-TextBtn.propTypes = {
-  text: React.PropTypes.string.isRequired
 };
 
 export {SocialButton as default, SocialSymbol, TextBtn};

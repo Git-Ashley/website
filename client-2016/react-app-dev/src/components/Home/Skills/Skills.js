@@ -4,25 +4,25 @@ import text from '@styles/text.css';
 
 const keySkills = [
   "Node",
+  "Typescript",
+  "JavaScript",
   "ReactJS",
   "Redux",
   "AWS",
+  "AWS Lambda",
+  "Docker",
   "MongoDB",
-  "Linux",
-  "Express",
   "PostgreSQL",
-  "WebSockets",
-  "Cypress",
-  "react-query",
+  "React Query",
 ];
 
 const otherSkills = [
+  "WebSockets",
   "C++",
-  "AWS Lambda",
+  "Cypress",
   "Nginx",
+  "Express",
   "Website Hosting",
-  "Java",
-  "Qt",
   "Python",
   "Webpack",
   "Networking",
