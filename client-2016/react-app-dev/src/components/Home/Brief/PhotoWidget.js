@@ -3,7 +3,7 @@ import {SocialSymbol} from '@lib/SocialButton/SocialButton';
 import position from '@styles/position.css';
 import {polarToCartesian} from 'math-tools';
 import {offsetFromParent} from 'dom-tools';
-import Me from '@media/ashphoto.png';
+import Me from '@media/ashpic1.jpg';
 
 export default class PhotoWidget extends React.PureComponent {
 
@@ -48,8 +48,7 @@ export default class PhotoWidget extends React.PureComponent {
           <br/>
           {githubIcon ? (<a href="https://github.com/Git-Ashley?tab=repositories" target="_blank">{githubIcon}</a>) : null}
           {linkedinIcon ? (<a href="https://www.linkedin.com/in/ashley-p-5b5a8599/" target="_blank">{linkedinIcon}</a>) : null}
-      </div>
-    );
+      </div>);
   }
 
   updateCoords(){

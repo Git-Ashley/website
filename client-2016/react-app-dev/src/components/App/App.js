@@ -15,20 +15,6 @@ import Account from '@components/Account/Account';
 //styles
 import text from '@styles/text.css';
 
-
-class DebugRouter extends BrowserRouter {
-  constructor(props){
-    super(props);
-    console.log('initial history is: ', JSON.stringify(this.history, null,2))
-    this.history.listen((location, action)=>{
-      console.log(
-        `The current URL is ${location.pathname}${location.search}${location.hash}`
-      )
-      console.log(`The last navigation action was ${action}`, JSON.stringify(this.history, null,2));
-    });
-  }
-}
-
 export default class extends React.Component {
   constructor(props){
     super(props);
@@ -63,14 +49,14 @@ export default class extends React.Component {
 
     return (
       <Provider store={this.store}>
-        <DebugRouter>
+        <BrowserRouter>
           <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
             <div className={text.regular} style={{height: '100%'}}>
               <NavBar routes={tabs}/>
               <MainView routes={tabs}/>
             </div>
           </IconContext.Provider>
-        </DebugRouter>
+        </BrowserRouter>
       </Provider>
     );
   }
