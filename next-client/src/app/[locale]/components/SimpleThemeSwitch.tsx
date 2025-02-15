@@ -70,7 +70,7 @@ export default function ThemeSwitch() {
   whitespace-nowrap
   rounded-md
   transition-colors
-  focus-visible:outline-none
+  focus-visible:outline-hidden
   focus-visible:ring-1
   focus-visible:ring-ring
   disabled:pointer-events-none
@@ -87,7 +87,9 @@ export default function ThemeSwitch() {
   px-0
   */
 
-  // Upgrade to tailwind v4.0, then the new shadcn.
+  // Upgrade to new shadcn. https://ui.shadcn.com/docs/tailwind-v4#upgrade-your-project
+  // Remove unused packages and ensure still works
+  // Fix the hover styles on the dropdown (or just use shadcn dropdown)
   // Use lucide react icons instead
   // Import Button and use it below, ensure its same as on shadcn website
   // Remove all use of 'hsl' in tailwind config one at a time and see how it goes.

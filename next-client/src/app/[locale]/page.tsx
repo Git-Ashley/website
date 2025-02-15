@@ -28,7 +28,7 @@ export default function DashboardPage({params: {locale}}: Props) {
         </div>
       </section>
       <section className='bg-background-secondary py-20 max-lg:py-10'>
-        <div className='mx-auto grid max-w-screen-lg grid-cols-3 gap-7 px-8 py-5 max-lg:max-w-fit max-lg:grid-cols-1 max-lg:gap-10'>
+        <div className='mx-auto grid max-w-(--breakpoint-lg) grid-cols-3 gap-7 px-8 py-5 max-lg:max-w-fit max-lg:grid-cols-1 max-lg:gap-10'>
           <div className='text-center'>
             <h2 className='mb-3  text-xl font-semibold'>{t('Project 1')}</h2>
             <p className='text-text-secondary max-lg:max-w-[500px]'>

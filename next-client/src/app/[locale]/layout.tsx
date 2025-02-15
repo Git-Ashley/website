@@ -53,7 +53,7 @@ export default async function RootLayout({
       className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className='mx-auto max-w-screen-2xl'>
+      <body className='mx-auto max-w-(--breakpoint-2xl)'>
         <ThemeProvider
           enableSystem
           attribute='class'
