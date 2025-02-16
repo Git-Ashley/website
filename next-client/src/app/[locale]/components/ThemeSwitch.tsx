@@ -3,7 +3,7 @@ import { capitalize } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
 import { useEffect, useRef, useState } from 'react'
-import { FiSun } from 'react-icons/fi'
+import { Sun } from 'lucide-react'
 import { useOnClickOutside } from 'usehooks-ts'
 import Button from './Button'
 
@@ -12,7 +12,7 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false) // New state to control dropdown visibility
   const { setTheme, resolvedTheme, themes, theme } = useTheme()
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   useEffect(() => setMounted(true), [])
   useOnClickOutside(ref, () => setIsOpen(false))
   if (!mounted)
@@ -26,7 +26,7 @@ export default function ThemeSwitch() {
         onClick={() => {}}
       >
         <span className='ml-2'>{t('Theme')}</span>
-        <FiSun />
+        <Sun />
       </Button>
     )
 
@@ -45,7 +45,7 @@ export default function ThemeSwitch() {
         onClick={toggleDropdown}
       >
         <span className='ml-2'>{t('Theme')}</span>
-        <FiSun />
+        <Sun />
       </Button>
       {isOpen && (
         <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>

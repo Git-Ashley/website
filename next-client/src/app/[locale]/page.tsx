@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import Button from './components/Button'
+import { Button } from "@/components/ui/button"
 import { Link } from '@/src/i18n/routing'
 import { setRequestLocale } from 'next-intl/server';
 
@@ -21,7 +21,7 @@ export default function DashboardPage({params: {locale}}: Props) {
         </div>
         <div className='mt-4 flex flex-row gap-4'>
           <Link lang={locale} href="/about">
-            <Button rounded size='large' variant='primary'>
+            <Button size='lg'>
               {t('More...')}
             </Button>
           </Link>
@@ -50,7 +50,7 @@ export default function DashboardPage({params: {locale}}: Props) {
         </div>
         <div className='mt-4 flex flex-row gap-4 justify-self-center'>
           <Link lang={locale} href="/projects">
-            <Button rounded size='large'>
+            <Button size='lg'>
               {t('More...')}
             </Button>
           </Link>
