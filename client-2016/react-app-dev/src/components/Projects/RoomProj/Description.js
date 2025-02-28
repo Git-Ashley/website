@@ -1,5 +1,4 @@
 import React from 'react';
-import ScriptLoader from '@services/ScriptLoader';
 import {Link} from 'react-router-dom';
 
 export default class RoomProj extends React.Component {

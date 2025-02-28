@@ -29,7 +29,7 @@ export const Header: FC<Props> = ({ locale }) => {
   const [currentPath] = useSelectedLayoutSegments()
 
   const navLinks: { path: Pathnames, label: string }[] = useMemo(() => [
-    { path: "/about", label: t('About') },
+    { path: "/cv", label: t('CV') },
     { path: "/projects", label: t('Projects') },
   ], []);
 

@@ -13,30 +13,6 @@ export default function ThemeSwitch() {
 
   if (!mounted) return null // to prevent Hydration Error
 
-  /*
-  inline-flex
-  items-center
-  justify-center
-  whitespace-nowrap
-  rounded-md
-  transition-colors
-  focus-visible:outline-hidden
-  focus-visible:ring-1
-  focus-visible:ring-ring
-  disabled:pointer-events-none
-  disabled:opacity-50
-  [&_svg]:pointer-events-none
-  [&_svg]:size-4
-  [&_svg]:shrink-0
-  hover:bg-accent
-  hover:text-accent-foreground
-  py-2
-  group/toggle
-  h-8
-  w-8
-  px-0
-  */
-
   // Look up a template for general backend. Which DB works best with next.js, etc.
   // **ATM** Prisma + Postgres seem to be the way to go. Dockerize them all.
   // Later: Look up an authentication template you can bring in.

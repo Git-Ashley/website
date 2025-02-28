@@ -20,7 +20,7 @@ const space_grotesk = Space_Grotesk({
 })
 export const metadata: Metadata = {
   title: 'Ashley Phillips portfolio',
-  description: 'Using nextjs 15 & tailwind'
+  description: 'Using nextjs 15, react 19 & tailwind 4'
 }
 
 export function generateStaticParams() {
@@ -77,7 +77,9 @@ export default async function RootLayout({
                 showSpinner={false}
               />
               <Header locale={locale} />
-              <main>{children}</main>
+              <main className="flex max-w-[800px] mx-auto justify-center pb-10">
+                {children}
+              </main>
             </NextIntlClientProvider>
           </ThemeProvider>
         </div>

@@ -47,8 +47,8 @@ const LangSwitcher: React.FC = () => {
         className="inline-flex text-sm w-full items-center justify-between gap-2"
       >
         <Button type="button" size="sm" variant="ghost">
-          <span className="hidden md:inline">{capitalize(currentLang.name)}</span>
-          <span className="inline md:hidden">{currentLang.code.toUpperCase()}</span>
+          <span className="text-xs hidden md:inline">{capitalize(currentLang.name)}</span>
+          <span className="text-xs inline md:hidden">{currentLang.code.toUpperCase()}</span>
           <Globe />
         </Button>
       </DropdownMenuTrigger>
