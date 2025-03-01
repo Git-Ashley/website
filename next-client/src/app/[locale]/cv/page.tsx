@@ -1,11 +1,17 @@
 import { CvCard } from '@/components/cv-card';
 import { BlurFade } from '@/components/ui/blur-fade'
-import { useTranslations } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function About() {
-  const t = useTranslations('')
+type Props = {
+  params: Promise<{locale: string}>;
+};
+
+export default async function About({ params }: Props) {
+  const t = await getTranslations('');
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <div className="w-[600px] flex flex-col gap-12">
       <section id="work" className="pt-10">

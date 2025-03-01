@@ -31,7 +31,7 @@ export const Header: FC<Props> = ({ locale }) => {
   const navLinks: { path: Pathnames, label: string }[] = useMemo(() => [
     { path: "/cv", label: t('CV') },
     { path: "/projects", label: t('Projects') },
-  ], []);
+  ], [t]);
 
   return (
     <div className='grid grid-cols-3 items-center gap-3 py-5 px-3'>

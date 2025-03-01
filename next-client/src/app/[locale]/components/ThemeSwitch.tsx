@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { useEffect, useRef, useState } from 'react'
 import { Sun } from 'lucide-react'
 import { useOnClickOutside } from 'usehooks-ts'
-import Button from './Button'
+import { Button } from '@/components/ui/button'
 
 export default function ThemeSwitch() {
   const t = useTranslations('')
@@ -14,11 +14,13 @@ export default function ThemeSwitch() {
   const { setTheme, resolvedTheme, themes, theme } = useTheme()
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => setMounted(true), [])
+
+  // @ts-expect-error
   useOnClickOutside(ref, () => setIsOpen(false))
   if (!mounted)
     return (
       <Button
-        size='small'
+        size='sm'
         type='button'
         className='text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3'
         id='options-menu'
@@ -37,7 +39,7 @@ export default function ThemeSwitch() {
   return (
     <div ref={ref} className='relative inline-block text-left'>
       <Button
-        size='small'
+        size='sm'
         type='button'
         className='text-destructive inline-flex w-full min-w-[95px] items-center justify-between gap-3'
         id='options-menu'

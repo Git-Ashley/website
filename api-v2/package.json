@@ -1,0 +1,19 @@
+{
+  "name": "node-social",
+  "version": "3.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-prod": "NODE_ENV=production nohup nodejs ./index.js &>/dev/null &"
+  },
+  "dependencies": {
+    "body-parser": "1.12.4",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "4.12.3",
+    "express-session": "1.11.2",
+    "helmet": "^2.3.0",
+    "server-room": "git+https://github.com/Git-Ashley/server-room.git"
+  },
+  "author": "Ashley Phillips",
+  "license": "ISC"
+}

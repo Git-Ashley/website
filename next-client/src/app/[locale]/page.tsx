@@ -1,26 +1,46 @@
 import { getTranslations } from 'next-intl/server';
-import { Button } from "@/components/ui/button"
-import { Link } from '@/src/i18n/routing'
 import { setRequestLocale } from 'next-intl/server';
-import prisma from '@/lib/prisma'
+//import prisma from '@/lib/prisma'
 import { Suspense } from 'react';
 import { NeonSign } from '@/components/neon-sign';
-import { projects } from './projects/page';
-import { BentoCard, BentoGrid } from '@/components/bento-grid';
+import { BentoCard } from '@/components/bento-grid';
 import { FileText } from 'lucide-react'
 import { Marquee } from '@/components/ui/marquee';
-import { cn } from '@/lib/utils';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{locale: string}>;
 };
 
-const Test = async () => {
+/*const Test = async () => {
   const user = await prisma.users.findFirst();
   return (
     <div>{JSON.stringify(user)}</div>
   )
-}
+}*/
+
+const projects = [
+  {
+    title: "Social App",
+    image: "/images/social-app-thumbnail.png",
+  },
+  {
+    title: "Memapp",
+    image: "/images/memapp-thumbnail.png",
+  },
+  {
+    title: "Room pattern",
+    image: "/images/room-thumbnail.png",
+  },
+  {
+    title: "Node Shooter",
+    image: "/images/nb-thumbnail.png",
+  },
+  {
+    title: "Auslander-Parter Algorithm",
+    image: "/images/ap-thumbnail.png",
+  },
+]
+
 export default async function DashboardPage({ params }: Props) {
   const t = await getTranslations('');
 

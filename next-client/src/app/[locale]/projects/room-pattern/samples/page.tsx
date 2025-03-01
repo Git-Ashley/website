@@ -5,7 +5,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{locale: string}>;
 };
 
 const codeBlockStyles = "border-2 border-primary-50"
@@ -62,7 +62,7 @@ export default async function Samples({ params }: Props) {
         Room.initialize(server, {sidHeader: SID});`}
         </SyntaxHighlighter>
         Firstly it is important to note you must pass the http server to
-        <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank"> Room.initialize()</a>, and your session ID string name in the cookie, with the  sidHeader prop in the optional 2nd argument (default to 'sid').
+        <a href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md#clientroominitialized" target="_blank"> Room.initialize()</a>{", and your session ID string name in the cookie, with the  sidHeader prop in the optional 2nd argument (default to 'sid')."}
 
         <SyntaxHighlighter className={codeBlockStyles} language="javascript" style={docco}>
         {`

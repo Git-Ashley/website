@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{locale: string}>;
 };
 
 export default async function RoomPatternPage({ params }: Props) {
