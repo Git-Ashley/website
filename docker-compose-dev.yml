@@ -20,11 +20,3 @@ services:
       - "443:443"
     links:
       - api
-<<<<<<< Updated upstream
-    volumes:
-      - /etc/tls/:/etc/tls/:ro
-=======
-
-#volumes:
-#  memapp-test-vol-3:
->>>>>>> Stashed changes
