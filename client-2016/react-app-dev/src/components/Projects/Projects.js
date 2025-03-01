@@ -12,11 +12,6 @@ import {connect} from 'react-redux';
 import text from '@styles/text.css';
 import position from '@styles/position.css';
 
-
-
-//temp
-import {Link} from 'react-router-dom';
-
 const Projects = props => {
   return (
     <div style={{height: '100%'}}>
@@ -40,6 +35,3 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps)(Projects);
-
-
-//<AuthRoute style={{marginTop: 100 + 'px'}} path={`${props.match.path}/NodeSocial`} component={NodeSocial}/>

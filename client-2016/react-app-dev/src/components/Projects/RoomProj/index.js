@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import text from '@styles/text.css';
 import position from '@styles/position.css';
 import {NavLink} from 'react-router-dom';
 

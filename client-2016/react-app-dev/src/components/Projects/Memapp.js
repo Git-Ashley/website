@@ -2,7 +2,7 @@ import React from 'react';
 import text from '@styles/text.css';
 import memappImg from '@media/memapp-screenshot.png';
 
-export default props => (
+export default () => (
   <section className="container">
     <div className="col-md-10 col-md-offset-1">
       <div className={`${text.title} ${text.center}`}>Memapp</div>
