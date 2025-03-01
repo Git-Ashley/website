@@ -1,8 +1,0 @@
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.show {display:block;}
-.dropdown-menu li:hover {
-  cursor: pointer;
-}

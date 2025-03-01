@@ -1,6 +1,6 @@
 services:
   api:
-    build: ./api-v1
+    build: ./node-social
     depends_on:
       - db
     ports:
@@ -9,29 +9,22 @@ services:
     links:
       - db
 
-  db:
-    container_name: memapp-test-1
-    image: mongo:4.4.6
-    ports:
-      - "27017:27017"
-    #volumes:
-    #  - type: volume
-    #    source: memapp-test-vol-3
-    #    target: /data/db
-
   client:
     build:
-      context: ./client-2016
+      context: ./next-client
       dockerfile: Dockerfile-dev
     depends_on:
       - api
     ports:
-      - "80:80"
+      - "3000:80"
       - "443:443"
     links:
       - api
+<<<<<<< Updated upstream
     volumes:
       - /etc/tls/:/etc/tls/:ro
+=======
 
 #volumes:
 #  memapp-test-vol-3:
+>>>>>>> Stashed changes
