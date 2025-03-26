@@ -14,7 +14,9 @@ export const routing = defineRouting({
       en: '/projects',
       fr: '/projets'
     },
-    '/projects/social-app': '/projects/social-app',
+    '/projects/social-app/lobby': '/projects/social-app/lobby',
+    '/projects/social-app/lobby-test': '/projects/social-app/lobby-test',
+    '/projects/social-app/node-shooter': '/projects/social-app/node-shooter',
     '/projects/memapp': '/projects/memapp',
     '/projects/room-pattern/summary': '/projects/room-pattern/summary',
     '/projects/room-pattern/samples': '/projects/room-pattern/samples',

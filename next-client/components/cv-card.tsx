@@ -8,6 +8,108 @@ import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
+interface BaseProps {
+  avatarClassName?: string;
+  badges?: readonly string[];
+  className?: string;
+  logoUrl: string;
+  altText: string;
+  title: string;
+  subtitle?: string;
+  isExpanded?: boolean;
+  metaInfo?: readonly string[];
+  period?: string;
+  description?: string;
+}
+
+export const BaseCvCard = ({
+  avatarClassName,
+  badges,
+  className,
+  logoUrl,
+  altText,
+  isExpanded = false,
+  title,
+  subtitle,
+  metaInfo,
+  period,
+  description,
+}: BaseProps) => (
+  <div className={cn("flex rounded-lg text-card-foreground", className)}>
+    <div className="flex-none">
+      <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+        <AvatarImage
+          src={logoUrl}
+          alt={altText}
+          className={cn("object-contain", avatarClassName)}
+        />
+        <AvatarFallback>{altText[0]}</AvatarFallback>
+      </Avatar>
+    </div>
+    <div className="flex-grow ml-4 items-center flex-col group">
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between gap-x-2 text-base">
+          <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+            {title}
+            {metaInfo && (
+              <span className="inline-flex gap-x-1">
+                {metaInfo.map((info, index) => (
+                  <Badge
+                    variant="secondary"
+                    className="align-middle text-xs"
+                    key={index}
+                  >
+                    {info}
+                  </Badge>
+                ))}
+              </span>
+            )}
+            {description && <ChevronRightIcon
+              className={cn(
+                "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                isExpanded ? "rotate-90" : "rotate-0"
+              )}
+            />}
+          </h3>
+          {!!period && <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+            {period}
+          </div>}
+        </div>
+        {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+      </div>
+      {description && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: isExpanded ? 1 : 0,
+            height: isExpanded ? "auto" : 0,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="mt-2 text-xs sm:text-sm pointer-events-none"
+        >
+          {description}
+          {badges && (
+            <div className="flex flex-wrap mt-1 gap-x-1 gap-y-1">
+              {badges.map((badge, index) => (
+                <Badge
+                  variant="secondary"
+                  className="align-middle text-xs"
+                  key={index}
+                >
+                  {badge}
+                </Badge>
+              ))}
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  </div>
+);
+
 interface CvCardProps {
   avatarClassName?: string;
   badges?: readonly string[];
@@ -18,21 +120,14 @@ interface CvCardProps {
   subtitle?: string;
   website?: string;
   metaInfo?: readonly string[];
-  period: string;
+  period?: string;
   description?: string;
 }
+
 export const CvCard = ({
-  avatarClassName,
-  badges,
-  className,
-  logoUrl,
-  altText,
-  title,
-  subtitle,
   website,
-  metaInfo,
-  period,
   description,
+  ...props
 }: CvCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -49,79 +144,7 @@ export const CvCard = ({
       className={cn("block", description ? "cursor-pointer" : "cursor-default" )}
       onClick={handleClick}
     >
-      <div className={cn("flex rounded-lg text-card-foreground", className)}>
-        <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className={cn("object-contain", avatarClassName)}
-            />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
-          </Avatar>
-        </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
-          <div className="flex flex-col">
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
-                {metaInfo && (
-                  <span className="inline-flex gap-x-1">
-                    {metaInfo.map((info, index) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
-                        key={index}
-                      >
-                        {info}
-                      </Badge>
-                    ))}
-                  </span>
-                )}
-                {description && <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />}
-              </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
-              </div>
-            </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
-          </div>
-          {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
-                height: isExpanded ? "auto" : 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="mt-2 text-xs sm:text-sm pointer-events-none"
-            >
-              {description}
-              {badges && (
-                <div className="flex flex-wrap mt-1 gap-x-1 gap-y-1">
-                  {badges.map((badge, index) => (
-                    <Badge
-                      variant="secondary"
-                      className="align-middle text-xs"
-                      key={index}
-                    >
-                      {badge}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </motion.div>
-          )}
-        </div>
-      </div>
+      <BaseCvCard description={description} isExpanded={isExpanded} {...props} />
     </Link>
   );
 };

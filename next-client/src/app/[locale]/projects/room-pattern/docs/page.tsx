@@ -6,12 +6,12 @@ type Props = {
 };
 
 export default async function Docs({ params }: Props) {
-  const t = getTranslations('');
+  const t = await getTranslations('roomdocs');
   const { locale } = await params;
   setRequestLocale(locale);
   return (
     <BlurFade>
-      See <a className="underline text-blue-600" target="_blank" href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md">API docs</a> on Github.
+      {t("LINE_1")} <a className="underline text-blue-600" target="_blank" href="https://github.com/Git-Ashley/room-samples/blob/master/api-docs.md">{t("LINE_2")}</a> {t("LINE_3")}.
     </BlurFade>
   )
 }

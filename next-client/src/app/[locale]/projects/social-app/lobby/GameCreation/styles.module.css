@@ -1,0 +1,56 @@
+.container {
+  background-color: #acd1da;
+  height: 100%;
+  border-style: solid;
+  border-color: #5a6f94;
+  border-width: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.gameWrap {
+  background-color: #558eca;
+  border-radius: 5px;
+  padding: 5px;
+  width: 150px;
+  margin-bottom: 5px;
+}
+.gameName {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.createButton {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.greenBtn {
+  display: inline-block;
+  text-align: center;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #7fd485;
+  border-color: #499456;
+  color: #499456;
+  &:hover, &:focus {
+    filter: brightness(113%);
+  }
+
+}

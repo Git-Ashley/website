@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -18,7 +17,7 @@ export interface ProjectCardProps {
   dates: string;
   tags: readonly string[];
   link?: string;
-  image?: string;
+  image: string;
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -38,7 +37,6 @@ export function ProjectCard({
   locale,
   image,
   video,
-  links,
   className,
 }: ProjectCardProps & { readonly locale: string }) {
   return (
@@ -67,7 +65,7 @@ export function ProjectCard({
             src={image}
             alt={title}
             width={500}
-            height={300}
+            height={400}
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
         )}

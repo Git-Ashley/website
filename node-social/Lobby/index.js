@@ -3,7 +3,7 @@ const EventTypes = require('../event-types.js');
 const LobbyPlayer = require('./lobby-player.js');
 const NodeShooter = require('../node-shooter.js');
 
-const MAX_GAMES = 3;
+const MAX_GAMES = 5;
 const DEFAULT_TIME = 300000;
 
 module.exports = class Lobby extends Room.WithReadyCheck {

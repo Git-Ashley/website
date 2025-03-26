@@ -77,7 +77,7 @@ export default async function RootLayout({
                 showSpinner={false}
               />
               <Header locale={locale} />
-              <main className="flex max-w-[800px] mx-auto justify-center pb-10">
+              <main className="flex mx-auto justify-center pb-10">
                 {children}
               </main>
             </NextIntlClientProvider>
